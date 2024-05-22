@@ -1,0 +1,28 @@
+$primary:#F1F1F2;
+$secondary:#5F249F;
+$green:#78BE20;
+$blue:#0057B7;
+$light-purple:#8B5DAD;
+$philippine-green:#008942;
+$futura: "Futura PT",
+sans-serif;
+$proxima: "Proxima Nova",
+sans-serif;
+$black:#000000;
+$white:#ffffff;
+$alert-yellow:#FCEA7B;
+$orange:#EB7722;
+// color paltte - 
+$colors:( "primary":$primary, "secondary":$secondary, "green":#78BE20, "black":#000000, "blue":#0057B7, "light-purple":#8B5DAD, "philippine-green":#008942, "alert-yellow":#FCEA7B, "orange":#EB7722);
+.test-btn {
+    background-color: map-get($colors, "secondary");
+}
+
+@mixin fancy-border($size:1px, $color:#000) {
+    border: $size solid $color;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
