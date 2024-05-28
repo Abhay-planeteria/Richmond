@@ -508,6 +508,10 @@
   .search_filter_title .filter_box {
     margin-right: 4px !important;
   }
+  /*.routRow {
+      .leftColumn {}
+      .rightColumn {}
+  }*/
   .mt_card_col {
     flex: 0 0 50%;
     max-width: 50%;
@@ -671,9 +675,9 @@
     font-weight: bold;
     font-size: 18px;
   }
-  .alert-bar {
-    /* top: 75px;*/
-  }
+  /*.alert-bar {
+       top: 75px;
+  }*/
   .nav_bottom {
     justify-content: flex-start;
     width: 100%;
@@ -962,6 +966,10 @@
   .logged-in .main_wrapper {
     padding-top: 135px;
   }
+  /*.routRow {
+      .leftColumn {}
+      .rightColumn {}
+  }*/
 }
 @media (max-width: 1300px) {
   .footer .footer-row {

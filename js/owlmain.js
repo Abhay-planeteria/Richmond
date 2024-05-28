@@ -10,8 +10,8 @@ $('.owl-general .owl-carousel').owlCarousel({
 	 autoWidth:true,
 	 items: 2,
     navText: [
-        '<img src="/img/slider-arrow.svg">',
-        '<img src="/img/slider-arrow.svg">'
+        '<img src="img/slider-arrow.svg">',
+        '<img src="img/slider-arrow.svg">'
     ],
     navContainer: '.owl-general .custom-nav',
     /*responsive:{
@@ -37,8 +37,8 @@ $('.slider_area  .owl-carousel').owlCarousel({
     nav: true,
 	items: 3,
     navText: [
-        '<img src="/img/arrow-back-red.svg">',
-        '<img src="/img/arrow-back-red.svg">'
+        '<img src="img/arrow-back-red.svg">',
+        '<img src="img/arrow-back-red.svg">'
     ],
     navContainer: '.LatestNews    .nav-custom',
   responsive:{
@@ -65,8 +65,8 @@ $('.slider_area  .owl-carousel').owlCarousel({
     nav: true,
 	items: 3,
     navText: [
-        '<img src="/img/arrow-back-red.svg">',
-        '<img src="/img/arrow-back-red.svg">'
+        '<img src="img/arrow-back-red.svg">',
+        '<img src="img/arrow-back-red.svg">'
     ],
     navContainer: '.LatestNews    .nav-custom',
   responsive:{

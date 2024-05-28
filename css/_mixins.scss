@@ -33,6 +33,10 @@
     font-weight: 700;
 }
 
+@mixin italic{
+    font-style: italic;
+}
+
 @mixin dflex {
     display: flex;
 }
