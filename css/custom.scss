@@ -8,7 +8,7 @@
 /*================================= Futura PT Heavy Start =======================================*/
 @font-face {
     font-family: 'Futura PT';
-    src: url('../fons/FuturaPT-Heavy.woff2') format('woff2'), url('../fonts/FuturaPT-Heavy.woff') format('woff');
+    src: url('../fonts/FuturaPT-Heavy.woff2') format('woff2'), url('../fonts/FuturaPT-Heavy.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -184,7 +184,7 @@ strong {
 .btn_sm,
 .gform_button {
     color: $white;
-    font-weight: 600;
+    font-weight: 500;
     padding: 13px 32px;
     text-decoration: none;
     display: inline-block;
@@ -192,7 +192,7 @@ strong {
     position: relative;
     background: $black;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     border: 0;
     &:hover {
@@ -208,26 +208,34 @@ strong {
         color: $white;
     }
 }
+.gform_button{
+    color: $secondary;
+    background: $white;
+    &:hover{
+        color: $white;
+        background: $black;
+    }
+}
 
 .wp-block-button__link {
+    border: 0;
+    font-weight: 500;
+    @include proxima;
+    padding: 13px 32px;
+    position: relative;
     color: $white !important;
-    font-weight: 600;
-    padding: 12px 20px;
     text-decoration: none !important;
     display: inline-block !important;
     text-align: center !important;
-    position: relative;
-    background: $primary !important;
+    background: $black !important;
     border-radius: 5px !important;
-    font-size: 14px !important;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: 0;
+    font-size: 16px !important;
+    text-transform: none;
     transition: all 200ms linear;
     &:hover {
-        background: $secondary !important;
-        color: $black !important;
         text-decoration: none;
+        color: $white !important;
+        background: $secondary !important;
     }
     img {
         margin-right: 10px;
@@ -871,6 +879,7 @@ label.title {
 .tripPlanner {
     .nav-tabs {
         border: 0;
+        margin-bottom: 0;
         a {
             border: 0;
             color: $white;
@@ -898,6 +907,7 @@ label.title {
             border-right: 1px solid $black;
             &:last-child{
                 border-right: none;
+                position: relative;
                 a{
                     border-radius: 0 5px 0 0;
                 }
@@ -907,14 +917,30 @@ label.title {
                     border-radius: 5px 0 0 0;
                 }
             }
+            .alert-count{
+                @include proxima;
+                @include bold;
+                width: 17px;
+                height: 17px;
+                text-align: center;
+                background: #B92031;
+                border-radius: 50px;
+                color: $white;
+                line-height: 17px;
+                font-size: 12px;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
         }
     }
     .tab-content {
         padding: 25px 25px 25px 40px;
         border-radius: 0 5px 5px 5px;
         background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         label {
-            top: 17px;
+            top: 9px;
             left: 15px;
             font-size: 14px;
             font-weight: 700;
@@ -1192,7 +1218,7 @@ label.title {
 
 .blue_black_info {
     .info_box {
-        background: $blue;
+        //background: $blue;
         padding: 45px 25px;
         clip-path: polygon(100% 0, 100% 81%, 92% 100%, 0 100%, 0 0);
         margin-bottom: 10px;
@@ -1573,7 +1599,7 @@ label.title {
 }
 
 .blue {
-    background-color: $blue;
+    background-color: $white;
 }
 
 .black {
@@ -1736,9 +1762,14 @@ label.title {
 }
 .document_era{
     display: flex;
-    width: fit-content;
     margin-bottom: 24px;
     flex-direction: column;
+    .col-md-12{
+        display: flex;
+        width: fit-content;
+        margin-bottom: 24px;
+        flex-direction: column;
+    }
 }
 .doc_block {
     font-size: 16px;
@@ -1750,6 +1781,13 @@ label.title {
     img {
         max-width: 24px;
         margin-right: 4px;
+    }
+    &.btn_sm{
+        width: fit-content;
+        font-weight: 500;
+        color: $white;
+        background: $secondary;
+        display: inline-block;
     }
 }
 
@@ -1897,7 +1935,7 @@ label.title {
 }
 
 .img_buttons{
-    padding-bottom: 88px;
+    //padding-bottom: 60px;
 }
 .img_button_row {
     justify-content: center;
@@ -2022,9 +2060,9 @@ label.title {
         height: 100%;
         position: relative;
         border: 0;
+        font-weight: 500;
         transition: background-color 0.3s ease-in-out;
         @include proxima;
-        @include semi;
         &:hover {
             color: $white;
             background-color: $secondary;
@@ -2082,11 +2120,11 @@ label.title {
 /*================================= How to Section Start =======================================*/
 .howto{
     background: #FCFEFF;
+    .container{
+        max-width: 900px;
+    }
 }
 .how_to_cont {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
     h2 {
         position: relative;
         margin-bottom: 42px;
@@ -2097,7 +2135,9 @@ label.title {
         margin-bottom: 0px;
         padding-top: 0;
         h6 {
-            margin-bottom: 0px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: none;
         }
         .number {
             width: 48px;
@@ -2319,7 +2359,7 @@ h2+.expand_img_grid {
         padding-bottom: 20px;
         background: $white;
         h3 {
-            font-size: 21px;
+            font-size: 18px;
             margin-bottom: 3px;
             font-weight: 700;
             color: $black;
@@ -2998,10 +3038,9 @@ p.news_category {
 
 .filterWrap {
     //padding-left: 15px;
-    form {
-        display: grid !important;
-        grid-template-columns: 260px 150px 150px;
-    }
+    display: grid !important;
+    grid-template-columns: 260px 150px 150px;
+    //form {}
     .reset {
         margin-top: 15px;
     }
@@ -3044,7 +3083,7 @@ p.news_category {
         padding-bottom: 30px;
     }
     .container {
-        max-width: 1000px;
+        max-width: 900px;
     }
     .news-dt-img {
         margin-bottom: 20px;
@@ -3098,7 +3137,7 @@ p.news_category {
         padding-top: 10px;
     }
     .topTitle {
-        max-width: 1000px;
+        max-width: 900px;
         margin-left: auto;
         margin-right: auto;
         p {
@@ -3152,8 +3191,8 @@ p.news_category {
 }
 
 .wp-block-group {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 50px;
+    padding-bottom: 88px;
     clear: both;
     >h2 {
         margin-bottom: 40px;
@@ -3185,7 +3224,7 @@ p.news_category {
 
 .main_wrapper {
     .wp-block-media-text {
-        max-width: 1000px !important;
+        max-width: 900px !important;
         &.alignfull {
             max-width: 100% !important;
         }
@@ -3196,10 +3235,9 @@ p.news_category {
 }
 
 .wp-block-media-text {
-    color: $white;
-    background: #2876AE !important;
-    padding: 70px 50px;
+    color: $black;
     position: relative;
+    background: $white !important;
     h2,
     h3,
     h4,
@@ -3207,11 +3245,11 @@ p.news_category {
     h6,
     p,
     li {
-        color: $white !important;
+        color: $black !important;
     }
     p a,
     li a {
-        color: $white;
+        color: $black;
         text-decoration: underline;
     }
     //.wp-block-button {}
@@ -3232,12 +3270,12 @@ p.news_category {
     .wp-block-media-text__media {
         position: relative;
     }
-    .wp-block-button__link:hover {
-        background: $black !important;
-        color: $white !important;
-    }
     .wp-block-media-text__content {
         position: relative;
+        text-align: center;
+        h2{
+            margin-bottom: 24px;
+        }
     }
 }
 
@@ -3251,6 +3289,7 @@ p.news_category {
     display: flex;
     flex-wrap: wrap !important;
     margin-bottom: 15px;
+    justify-content: center;
     >.wp-block-button {
         margin-right: 10px;
         &:last-child {
@@ -3321,11 +3360,12 @@ p.news_category {
 }
 
 .advgb-tabs-wrapper .advgb-tab-body-wrapper div.advgb-tab-body {
-    padding-left: 0px;
-    padding-right: 0px;
+    max-width: 900px;
+    padding-left: 50px;
+    padding-right: 50px;
     background: $white;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 60px;
     padding-bottom: 40px;
     >.has-background:first-of-type:first-child {
         margin-top: -40px;
@@ -3334,7 +3374,7 @@ p.news_category {
 }
 
 .advgb-tab-body-wrapper div.advgb-tab-body>* {
-    max-width: 1000px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -3366,7 +3406,7 @@ div.advgb-tab-body>iframe {
     .left_right_wraper,
     .wp-block-advgb-images-slider,
     .wp-block-advgb-video {
-        max-width: 1000px
+        max-width: 900px
     }
     >ul li,
     >ol li {
@@ -3451,7 +3491,7 @@ div.advgb-tab-body>iframe {
         .wp-block-image,
         .wp-block-quote,
         .embed-container {
-            max-width: 1000px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -3466,11 +3506,11 @@ div.advgb-tab-body>iframe {
 }
 
 .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-    max-width: 1000px;
+    max-width: 900px;
 }
 
 body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-    max-width: 1000px !important;
+    max-width: 900px !important;
 }
 
 body .is-layout-constrained>.wp-block-group {
@@ -3491,6 +3531,9 @@ body .is-layout-constrained>.wp-block-group {
         .wp-block-advgb-table {
             margin-left: auto;
             margin-right: auto;
+            table{
+                border: 1px solid #A1A1A2;
+            }
         }
     }
 }
@@ -3498,7 +3541,7 @@ body .is-layout-constrained>.wp-block-group {
 .main_content {
     > {
         * {
-            max-width: 1000px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -3602,30 +3645,34 @@ body .is-layout-constrained>.wp-block-group {
 .advgb-accordions-wrapper {
     .wp-block-advgb-accordion-item,
     .advgb-accordion-item {
-        margin-bottom: 8px !important;
+        margin-bottom: 16px !important;
         box-shadow: none;
         border-radius: 0px;
-        border: 1px solid #DBDBDB;
+        border: 0;
     }
     .advgb-accordion-header {
-        padding: 8px 30px !important;
+        cursor: pointer !important;
+        padding: 14px 32px !important;
         border: 0 !important;
         border-radius: 0px !important;
         margin-top: 0px !important;
         background: $white!important;
         padding-right: 40px !important;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25) !important;
         &:hover {
-            outline: 1px solid #68C8F1;
+            outline: 1px solid $secondary;
             /*.advgb-accordion-header-title {}
             .advgb-accordion-header-icon {
                 img {}
             }*/
         }
         .advgb-accordion-header-title {
-            color: #010101 !important;
+            color: $black !important;
             position: relative;
-            font-size: 18px !important;
-            font-weight: 700;
+            @include bold;
+            @include proxima;
+            font-size: 16px !important;
+            line-height: 22px;
         }
         svg {
             display: none;
@@ -3642,12 +3689,12 @@ body .is-layout-constrained>.wp-block-group {
         }
     }
     .advgb-accordion-header-icon {
+        width: 24px;
+        height: 24px;
         margin-right: 0px;
-        width: 20px;
-        height: 20px;
         background-repeat: no-repeat;
         background-size: 24px;
-        margin-top: 10px;
+        margin-top: 0px;
         background-image: url(../img/angle-down.svg);
         position: absolute;
         right: 12px;
@@ -3657,10 +3704,18 @@ body .is-layout-constrained>.wp-block-group {
         display: block !important;
     }
     .advgb-accordion-body {
-        background: $white !important;
-        border: 1px solid $white !important;
-        padding: 35px 60px !important;
+        background: transparent !important;
+        border: transparent !important;
+        padding: 16px !important;
+        margin-top: 8px !important;
         margin-bottom: 0px !important;
+        p{
+            line-height: 22px;
+            margin-bottom: 8px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
     }
     .advgb-accordion-header[aria-expanded="true"] .advgb-accordion-header-icon {
         transform: rotate(180deg);
@@ -3668,40 +3723,46 @@ body .is-layout-constrained>.wp-block-group {
     }
 }
 
-//Tables
+/*================================= Table Section Start =======================================*/
 .wp-block-table,
 .wp-block-advgb-table {
     thead {
         border-bottom: none !important;
     }
     td {
-        padding: 10px 20px !important;
+        @include bold;
         border: 0 !important;
-        border-right: 0 !important;
+        padding: 15px 32px 15px 40px !important;
+        border-right: 1px solid #FFFFFF !important;
+        @media(max-width: 767px){
+            padding: 15px !important;
+        }
     }
     td:last-child {
         border-right: 0px !important;
     }
     th {
-        background: $primary;
+        background: $secondary;
         text-transform: none;
         color: $white;
         border-top: 0 !important;
         border-bottom: 0px !important;
-        padding: 15px 20px !important;
-        border: 0 !important;
+        padding: 24px 32px 24px 40px !important;
         font-weight: 700;
         font-size: 16px;
+        @media(max-width: 767px){
+            padding: 15px !important;
+        }
     }
     th:last-child {
         border-right: 0px;
     }
     tbody {
         tr:nth-child(2n+1) {
-            background: $white !important
+            background: #FAF9FA !important
         }
         tr:nth-child(2n) {
-            background: #fafafa !important
+            background: #eaeaea !important
         }
     }
 }
@@ -3712,30 +3773,33 @@ body .is-layout-constrained>.wp-block-group {
         width: 100%;
     }
 }
+/*================================= Table Section End =======================================*/
 
 //Tabs
 .advgb-tabs-wrapper {
     ul.advgb-tabs-panel {
         display: flex;
         justify-content: center;
-        border-bottom: 5px solid #B1ADAD !important;
+        border-bottom: 1px solid $primary !important;
         li.advgb-tab {
             border-radius: 0 !important;
-            //background: $lightgray !important;
-            color: #000000 !important;
+            background: $black !important;
+            color: $white !important;
             font-weight: 700;
-            min-width: 220px;
-            min-height: 60px;
+            min-width: 180px;
+            //min-height: 60px;
             display: flex !important;
             align-items: center;
             justify-content: center;
             margin-bottom: 0px !important;
             margin-right: 0px !important;
-            border: 1px solid #B1ADAD !important;
+            border: 1px solid $primary !important;
+            border-bottom: 0 !important;
             a {
-                color: $black !important;
+                @include proxima;
+                color: $white !important;
                 text-align: center;
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 700;
                 width: 100%;
                 height: 100%;
@@ -3744,19 +3808,20 @@ body .is-layout-constrained>.wp-block-group {
                 justify-content: center;
                 position: relative;
                 overflow: visible !important;
+                padding: 15px 10px;
                 &:focus {
-                    outline: 1px dotted #000;
+                    outline: none;
                 }
             }
             &.advgb-tab.advgb-tab-active {
                 background: $white !important;
-                margin-bottom: -1px !important;
+                margin-bottom: 0px !important;
                 border-right: 0 !important;
                 border-left: 0px !important;
                 a {
-                    color: $black!important;
+                    color: $black !important;
                     p {
-                        color: $black!important;
+                        color: $black !important;
                     }
                 }
                 a:after {
@@ -3768,46 +3833,62 @@ body .is-layout-constrained>.wp-block-group {
                     height: 10px;
                     bottom: -4px;
                     z-index: 999;
+                    display: none;
                 }
             }
             &:hover {
-                //background: $lightblue !important;
+                background: $secondary !important;
                 a {
-                    color: $black !important;
+                    color: $white !important;
                     p {
-                        color: $black !important;
+                        color: $white !important;
                     }
                 }
             }
             &:first-child.advgb-tab.advgb-tab-active {
-                border-left: 1px solid #B1ADAD !important;
+                border-left: 1px solid $primary !important;
             }
             &:last-child.advgb-tab.advgb-tab-active {
-                border-right: 1px solid #B1ADAD !important;
+                border-right: 1px solid $primary !important;
+            }
+            &:first-child{
+                border-radius: 5px 0 0 0 !important;
+            }
+            &:last-child{
+                border-radius: 0 5px 0 0 !important;
             }
         }
     }
     &.advgb-tab-vert-desktop {
-        max-width: 1000px;
+        max-width: 1200px !important;
         ul.advgb-tabs-panel {
             border-bottom: 0px !important;
+            justify-content: start;
             .advgb-tab-active a::after {
                 display: none;
             }
             li.advgb-tab.advgb-tab.advgb-tab-active {
-                border-left: 1px solid #B1ADAD !important;
+                border-left: 1px solid $primary !important;
                 border-right: 0px !important;
             }
+            li.advgb-tab.advgb-tab:last-child{
+                border-radius: 0 !important;
+            }
+        }
+        .advgb-tab-body-wrapper{
+            z-index: 1;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
         }
         div.advgb-tab-body {
-            padding-left: 20px !important;
+            max-width: 100%;
+            padding: 73px 90px;
         }
     }
 }
 
 //Alerts
 .alert-area {
-    background: #DB6626;
+    background: $alert-yellow;
     position: absolute;
     top: 104px;
     z-index: 9;
@@ -3884,14 +3965,14 @@ body .is-layout-constrained>.wp-block-group {
     max-width: 1200px !important;
     .advgb-post-title {
         color: $black;
-        font-family: "outfitserrat", sans-serif !important;
+        @include proxima;
         font-weight: 600 !important;
         font-size: 20px !important;
         min-height: 55px;
         a {
             color: $secondary;
             font-weight: 600 !important;
-            font-family: "outfitserrat", sans-serif !important;
+            @include proxima;
             text-decoration: none;
         }
     }
@@ -3906,7 +3987,7 @@ body .is-layout-constrained>.wp-block-group {
         }
     }
     .advgb-post-excerpt {
-        font-family: "outfitserrat", sans-serif !important;
+        @include proxima;
     }
     .advgb-recent-post {
         background: $white;
@@ -4139,6 +4220,11 @@ body .is-layout-constrained>.wp-block-group {
 //content display blocks ends
 //Route directory
 .innerHero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     .hr_row {
         width: 100%;
         margin: 0px;
@@ -4155,31 +4241,6 @@ body .is-layout-constrained>.wp-block-group {
             padding: 0px;
         }
     }
-    .tripPlanner_wrap {
-        //position: static;
-        width: auto;
-        .tripPlanner {
-            .nav-tabs a {
-                font-size: 24px;
-                padding: 10px 16px;
-            }
-        }
-        .search_wrap {
-            grid-template-columns: 1fr 1fr;
-            grid-row-gap: 12px;
-            >div:nth-child(1),
-            >div:nth-child(2) {
-                grid-column: 1/3;
-            }
-            .sub_btn {
-                grid-column: 1/2;
-                a {
-                    width: 100px;
-                    height: 50px;
-                }
-            }
-        }
-    }
     .map_wrap {
         width: 100%;
     }
@@ -4188,11 +4249,6 @@ body .is-layout-constrained>.wp-block-group {
         width: 100%;
         object-fit: cover;
     }
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
     .fixmapAlert {
         position: absolute;
         bottom: 0px;
@@ -4263,7 +4319,7 @@ body .is-layout-constrained>.wp-block-group {
 }
 
 .search-box {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     .input-group {
         //border: 1px solid $black;
         overflow: hidden;
@@ -4292,7 +4348,10 @@ body .is-layout-constrained>.wp-block-group {
         padding-top: 5px;
     }
     .leftScFtr {
-        padding-top: 65px;
+        padding-top: 45px;
+        .doc_block.btn_sm{
+            width: 100%;
+        }
     }
     .select2-container .select2-selection--single {
         height: 35px;
@@ -4301,16 +4360,15 @@ body .is-layout-constrained>.wp-block-group {
 }
 
 .text-Holder-sr {
-    background: $blue;
-    padding: 22px;
-    margin-top: 20px;
     display: block;
+    margin-top: 24px;
     h4 {
-        color: $white;
+        color: $black;
+        font-size: 16px;
     }
     .btn_sm {
         width: 100%;
-        margin-bottom: 8px;
+        margin-bottom: 16px;
     }
 }
 
@@ -4341,7 +4399,7 @@ body .is-layout-constrained>.wp-block-group {
     padding: 2px;
     margin-right: 10px;
     text-align: center;
-    border: 2px solid #B1ADAD;
+    border: 2px solid $primary;
 }
 
 .checkbox-custom:checked+.checkbox-custom-label:before {
@@ -4354,8 +4412,6 @@ body .is-layout-constrained>.wp-block-group {
     margin-bottom: 50px;
     h2 {
         margin-bottom: 30px;
-        text-align: center;
-        color: #10204E;
     }
     .routeAccdn {
         padding-top: 10px;
@@ -4363,25 +4419,24 @@ body .is-layout-constrained>.wp-block-group {
 }
 
 .accoRt_block {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     .rtTitle {
-        //background: $secondary;
         display: flex;
         align-items: center;
         min-height: 55px;
         padding: 8px 15px;
-        justify-content: space-between;
         position: relative;
         cursor: pointer;
         padding-right: 60px;
         padding-left: 45px;
+        background: $white;
+        justify-content: space-between;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
         h3 {
             margin: 0;
             display: flex;
             align-items: center;
-            font-weight: 700;
             font-size: 16px;
-            @include proxima;
             .rtNo {
                 margin-right: 5px;
             }
@@ -4405,7 +4460,7 @@ body .is-layout-constrained>.wp-block-group {
             }
         }
         &:hover {
-            background: $primary;
+            /*background: $primary;
             h3,
             p {
                 color: $white;
@@ -4414,6 +4469,12 @@ body .is-layout-constrained>.wp-block-group {
                 img {
                     @include img-white;
                 }
+            }*/
+        }
+        .dt_btn a{
+            color: $black;
+            &:hover{
+                color: $black;
             }
         }
     }
@@ -4422,9 +4483,11 @@ body .is-layout-constrained>.wp-block-group {
         align-items: center;
         +p {
             min-width: 110px;
+            @include bold;
         }
     }
     .rtDots {
+        display: none;
         width: 18px;
         height: 18px;
         min-width: 18px;
@@ -4434,22 +4497,27 @@ body .is-layout-constrained>.wp-block-group {
         background: $secondary;
     }
     .alerticon {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         @include all;
         position: absolute;
-        left: 5px;
-        top: 10px;
+        left: -15px;
+        top: 13px;
+        background: $alert-yellow;
+        img{
+            width: 19px;
+            filter: grayscale(100) brightness(0.1);
+        }
     }
 }
 
 .inner-alert {
-    //background: $red;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 32px 40px;
+    margin: 0 -24px 24px;
+    background: $alert-yellow;
     p {
+        color: $black;
         margin-bottom: 5px;
-        color: $white;
         a {
             color: $black;
             font-weight: 600;
@@ -4460,33 +4528,35 @@ body .is-layout-constrained>.wp-block-group {
             }
         }
     }
+    a {
+        color: $black;
+        font-weight: 600;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+            font-weight: 700;
+        }
+    }
     h4 {
-        color: $white;
-        @include proxima;
-        font-size: 16px;
-        margin: 0px;
         display: flex;
         align-items: center;
         img {
-            margin-right: 5px;
+            display: none;
         }
     }
 }
 
 .accoRtpanel {
     display: none;
-    padding: 20px;
+    padding: 24px;
     //background: $secondary;
-    .btn_sm {
+    .btn_sm:not(.doc_block) {
         margin-bottom: 20px;
     }
 }
 
 .destination_info {
     padding-top: 15px;
-    h4 {
-        @include proxima;
-    }
 }
 
 //Route Detail
@@ -4931,7 +5001,7 @@ body .is-layout-constrained>.wp-block-group {
     padding-bottom: 100px;
     background: #F1F1F2;
     .container {
-        max-width: 1000px;
+        max-width: 900px;
         .sv_alert_row{
             display: block;
         }
@@ -5013,14 +5083,14 @@ body .is-layout-constrained>.wp-block-group {
         }
     }
     .top-text {
-        max-width: 1000px;
+        max-width: 900px;
         margin: 0 auto;
     }
     .expanding-grid {
         padding-top: 20px;
     }
     .meeting-content {
-        max-width: 1000px;
+        max-width: 900px;
         margin: 0 auto;
         .accordion_era {
             margin-top: 30px;
@@ -5042,7 +5112,7 @@ body .is-layout-constrained>.wp-block-group {
         padding-bottom: 5px;
     }
     .agenda_content {
-        max-width: 1000px;
+        max-width: 900px;
         margin: 0 auto;
     }
     .agd_filter {
@@ -5102,7 +5172,7 @@ body .is-layout-constrained>.wp-block-group {
     .nav-tabs {
         border: none;
         margin: 0 auto;
-        max-width: 1000px;
+        max-width: 900px;
         justify-content: center;
         .nav-item{
             width: 50%;
@@ -5321,7 +5391,7 @@ body .is-layout-constrained>.wp-block-group {
 .proc_wrap {
     padding-bottom: 30px;
     .container {
-        max-width: 1000px;
+        max-width: 900px;
         margin: 0 auto;
     }
     .top-text {
@@ -5415,7 +5485,14 @@ body .is-layout-constrained>.wp-block-group {
     }
 }
 
-//goform general
+/*================================= goform general Start =======================================*/
+.gen_form_wrapper{
+    background: $secondary;
+    padding: 64px 72px 40px;
+    .gform_heading{
+        display: none;
+    }
+}
 .gform_wrapper.gravity-theme {
     input[type="color"],
     input[type="date"],
@@ -5433,16 +5510,19 @@ body .is-layout-constrained>.wp-block-group {
     input[type="week"],
     select,
     textarea {
-        border: 1px solid #d9d9d9;
+        border: 1px solid $primary;
         background-color: $white;
-        min-height: 45px;
-        padding: 10px;
+        min-height: 50px;
+        padding: 12px 16px;
         border-radius: 5px;
         width: 100%;
     }
     .gform_footer {
-        justify-content: center;
-        padding-top: 20px;
+        justify-content: left;
+        padding: 0 !important;
+    }
+    .gform_fields{
+        grid-row-gap: 24px !important;
     }
     textarea.small {
         min-height: 200px;
@@ -5477,6 +5557,7 @@ body .is-layout-constrained>.wp-block-group {
         }
     }
 }
+/*================================= goform general End =======================================*/
 
 //wp pagination
 .wp-pagenavi,
@@ -5597,7 +5678,7 @@ body .is-layout-constrained>.wp-block-group {
 }
 
 .wp-block-group.content-center {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0px auto;
     padding-top: 30px;
 }
@@ -5608,19 +5689,27 @@ body .is-layout-constrained>.wp-block-group {
 }
 
 .addeventatc.addtocal {
-    color: $primary!important;
+    color: $primary !important;
     font-weight: 600;
     font-size: 16px !important;
-    font-family: "outfitserrat", sans-serif;
+    @include proxima;
     box-shadow: none !important;
     background: none !important;
     padding-left: 0px !important;
     z-index: 9;
+    margin-bottom: 20px;
     a {
-        font-family: "outfitserrat", sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
+        color: $secondary;
+        @include bold;
+        @include proxima;
+        text-transform: none;
         text-decoration: none;
+        font-size: 16px;
+        margin-bottom: 3px;
+        padding: 10px 10px 10px 40px;
+        background-image: url(../img/icon-add-calendar.svg);
+        background-repeat: no-repeat;
+        background-position: top 7px left 0;
     }
     &:hover {
         text-decoration: underline;
@@ -5706,7 +5795,7 @@ button.is-pressed {
 /* backend font fixes*/
 
 .editor-styles-wrapper .wp-block-post-title {
-    font-family: "outfitserrat", sans-serif !important;
+    @include proxima ;
 }
 
 button.is-pressed {
@@ -5767,6 +5856,7 @@ button.is-pressed {
     font-weight: 500;
     padding-bottom: 10px;
     padding-top: 5px;
+    display: none !important;
 }
 
 legend.gform-field-label {

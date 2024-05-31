@@ -86,6 +86,12 @@
             }
         }
     }
+    .advgb-tabs-wrapper.advgb-tab-stack-mobile .advgb-tab-body-wrapper .advgb-tab-body-container{
+        margin-bottom: 0 !important;
+    }
+    .advgb-tabs-wrapper.advgb-tab-vert-desktop div.advgb-tab-body{
+        padding: 60px 40px;
+    }
     .fixed_btns ul li a {
         padding: 6px 2px;
         min-width: 100px;
@@ -106,7 +112,13 @@
         min-height: 10px;
     }
     .tripPlanner_wrap{
-        bottom: 20px;
+        bottom: auto;
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     .tripPlanner {
         .nav-tabs .nav-item {
@@ -117,6 +129,9 @@
         }
         .tab-content {
             padding: 25px 10px;
+            label{
+                left: 25px;
+            }
         }
         .search_wrap {
             display: flex;
@@ -383,6 +398,15 @@
         font-size: 30px;
         line-height: 35px;
     }
+    .main_banner{
+        margin-top: 106px;
+        .carousel:before{
+            background: $primary;
+        }
+    }
+    .main_banner .carousel-inner{
+        display: none;
+    }
     .main_banner .btn_banner {
         background: $primary;
         border-color: $primary;
@@ -393,6 +417,12 @@
     .main_banner .carousel-control-next,
     .main_banner .carousel-control-prev {
         display: none;
+    }
+    .main_header.home-header{
+        background: $secondary;
+        .navbar-brand img{
+            max-width: 209px;
+        }
     }
     .main_header .navbar-brand {
         font-size: 6px;
@@ -591,10 +621,6 @@
 }
 
 @media (min-width:1200px) {
-    .wp-block-media-text.alignfull {
-        padding-left: 70px !important;
-        padding-right: 70px !important;
-    }
     .navbar-expand-xl .navbar-nav {
         margin-right: -15px;
     }
@@ -732,7 +758,7 @@
     .navbar-toggler .icon-bar {
         width: 25px;
         height: 2px;
-        background: $blue;
+        background: $white;
         display: block;
         margin-bottom: 5px;
         border-radius: 100px;
@@ -879,6 +905,12 @@
     }
 }
 
+@media (min-width: 1441px) {
+    .wp-block-media-text.alignfull {
+        padding-left: 70px !important;
+        padding-right: 70px !important;
+    }
+}
 @media (min-width:2100px) {
     .wp-block-media-text.is-image-fill .wp-block-media-text__media {
         min-height: 1200px;

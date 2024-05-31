@@ -7,20 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Route Directory</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="css/owl.carousel.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+    <!-- ============================= Header Start ================================== -->
     <header class="main_header">
-        <div class="navbar navbar-expand-xl  ">
+        <div class="navbar navbar-expand-xl">
             <div class="container">
                 <div class="logo_wrap">
                     <a class="navbar-brand" href="#">
@@ -35,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <div class="top_header_cont">
                         <div class="top_menu">
-                            <div class="social_media">
+                            <!-- <div class="social_media">
                                 <ul>
                                     <li>
                                         <a href=""><img src="img/facebook.svg" alt=""> </a>
@@ -58,7 +55,7 @@
                                 <li> <a href="#"> Contact Us </a> </li>
                                 <li> <a href="#"> Service Alerts</a> </li>
                                 <li> <a href="#"> Lost & Found</a> </li>
-                            </ul>
+                            </ul> -->
                             <div class="select_language">
                                 <select class="form_control">
                               <option>Translate</option>
@@ -74,27 +71,21 @@
                     <div class="nav_bottom  ">
                         <ul class="navbar-nav ">
                             <li class="nav-item ">
-                                <a class="nav-link" href="#">Local and Express Routes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Fares & Guides</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#"> Events Calendar </a> </li>
-                                    <li><a href="#"> District News </a> </li>
-                                    <li><a href="#"> How To’s, Guides And Webinars </a> </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Tri MyRide</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"> Paratransit </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Work With Us</a>
+                                <a class="nav-link" href="#">Ride</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Business</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"> Business </a> </li>
+                                    <li><a href="#"> Business </a> </li>
+                                    <li><a href="#"> Business </a> </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">RideFinders</a>
                             </li>
                         </ul>
                     </div>
@@ -102,97 +93,101 @@
             </div>
         </div>
     </header>
-    <div class="main_wrapper" style="">
+    <!-- ============================= Header End ================================== -->
+
+    <div class="main_wrapper">
+        
+        <!-- ============================= Breadcurmb Start ================================== -->
         <div class="main_breadcrumb">
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href="#"> Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="#">Page title </a></li>
-                        <li class="breadcrumb-item"><a href="#">Page title </a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Page title</li>
+                        <li class="breadcrumb-item"><a href="#"> Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">page title </a></li>
+                        <li class="breadcrumb-item"><a href="#">page title </a></li>
+                        <li class="breadcrumb-item active" aria-current="page">page title</li>
                     </ol>
                 </nav>
             </div>
         </div>
-        <div class="page_title text-center">
-            <h1>Fixed Routes Directory</h1>
+        <!-- ============================= Breadcurmb End ================================== -->
+
+        <div class="page_title text-center pb-0">
+            <h1>All Routes</h1>
         </div>
+        
         <div class="innerHero">
             <div class="row hr_row">
-                <div class="col-lg-8 col_left">
+                <div class="col-lg-12 p-0">
                     <div class="hero_map">
                         <img src="img/map.png" alt="">
                     </div>
                 </div>
-                <div class="col-lg-4 col_right">
-                    <div class="tripPlanner_wrap">
-                        <div class="tripPlanner">
-                            <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#tab1">Trip Planner</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tab2">Service Alerts</a>
-                                </li>
-                            </ul>
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div class="tab-pane  active" id="tab1">
-                                    <div class="search_wrap">
-                                        <div class="form-group">
-                                            <label for="">Start</label>
-                                            <input type="text" class="form-control" id="" placeholder="Address/Stop/Landmark">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="">End</label>
-                                            <input type="text" class="form-control" id="" placeholder="Address/Stop/Landmark">
-                                        </div>
-                                        <div class="form-group date_ifo">
-                                            <label for="">Date</label>
-                                            <select class="form-control">
-                                       <option value="">MM/DD</option>
-                                       <option value="">1</option>
-                                       <option value="">2</option>
-                                    </select>
-                                        </div>
-                                        <div class="form-group time_ifo">
-                                            <label for="">Time</label>
-                                            <select class="form-control">
-                                       <option value="">00/00</option>
-                                       <option value="">1</option>
-                                       <option value="">2</option>
-                                    </select>
-                                        </div>
-                                        <div class="form-group dep_ifo">
-                                            <select class="form-control">
-                                       <option value="">Departing</option>
-                                       <option value="">1</option>
-                                       <option value="">2</option>
-                                    </select>
-                                        </div>
-                                        <div class="sub_btn">
-                                            <a href="#" class="btn_sm ">Go</a>
-                                        </div>
+                <div class="tripPlanner_wrap">
+                    <div class="tripPlanner">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tab1">Trip Planner</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="alert-count">5</div>
+                                <a class="nav-link" data-toggle="tab" href="#tab2">Service Alerts</a>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane  active" id="tab1">
+                                <div class="search_wrap">
+                                    <div class="form-group">
+                                        <label for="">Start</label>
+                                        <input type="text" class="form-control" id="" placeholder="Address/Stop/Landmark">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">End</label>
+                                        <input type="text" class="form-control" id="" placeholder="Address/Stop/Landmark">
+                                    </div>
+                                    <div class="form-group date_ifo">
+                                        <label for="">Date</label>
+                                        <select class="form-control">
+                                    <option value="">MM/DD</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                                    </div>
+                                    <div class="form-group time_ifo">
+                                        <label for="">Time</label>
+                                        <select class="form-control">
+                                    <option value="">00/00</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                                    </div>
+                                    <div class="form-group dep_ifo">
+                                        <select class="form-control">
+                                    <option value="">Departing</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                                    </div>
+                                    <div class="sub_btn">
+                                        <a href="#" class="btn_sm ">Go</a>
                                     </div>
                                 </div>
-                                <div class="tab-pane  fade" id="tab2">
-                                    <div class="alertlists">
-                                        <div class="alert-title">
-                                            <span class="h6"> <img src="img/bus_alert.svg" alt=""> Bus Routes w/alerts</span>
-                                            <a href="#">See All Alerts</a>
-                                        </div>
-                                        <ul>
-                                            <li>200X EB</li>
-                                            <li>200X EB</li>
-                                            <li>200X EB</li>
-                                            <li>200X EB</li>
-                                            <li class="active">200X EB</li>
-                                            <li>200X EB</li>
-                                        </ul>
+                            </div>
+                            <div class="tab-pane  fade" id="tab2">
+                                <div class="alertlists">
+                                    <div class="alert-title">
+                                        <span class="h6"> <img src="img/bus_alert.svg" alt=""> Bus Routes w/alerts</span>
+                                        <a href="#">See All Alerts</a>
                                     </div>
+                                    <ul>
+                                        <li>200X EB</li>
+                                        <li>200X EB</li>
+                                        <li>200X EB</li>
+                                        <li>200X EB</li>
+                                        <li class="active">200X EB</li>
+                                        <li>200X EB</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -205,6 +200,9 @@
                 <div class="row routRow">
                     <div class="col-md-4 col-lg-3 leftColumn">
                         <div class="leftScFtr">
+                            <div class="document_era">
+                                <a href="#" class="doc_block btn_sm"> <img src="img/PDF.svg" alt="pdf"> <span>Map download</span> </a>
+                            </div>
                             <div class="search-box">
                                 <div class="search_input">
                                     <form role="search" method="get" id="">
@@ -227,66 +225,36 @@
                             </div>
                             <div class="text-Holder-sr">
                                 <h4>Looking for Paratransit Service?</h4>
-                                <a href="#" class="link_white">Learn More</a>
+                                <a href="#" class="btn_sm">Care Paratransit</a>
+                                <a href="#" class="btn_sm">On Demand Service</a>
+                                <a href="#" class="btn_sm">Ride Finders</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-8 col-lg-9 rightColumn">
                         <div class="allRouteinfo">
                             <div class="route-info-wrap">
-                                <h2>Local and Express Routes</h2>
+                                <h3>Pulse BRT</h3>
                                 <div class="routeAccdn">
                                     <div class="accoRt_block">
                                         <div class="rtTitle">
                                             <div class="rtTitleWrap">
-                                                <div class="alerticon">
-                                                    <img src="img/alert-icon.svg" alt="">
-                                                </div>
-                                                <h3> <span class="rtNo">01</span>Route Name</h3>
+                                                <h3> <!--<span class="rtNo">01</span>-->Rapid Bus Route</h3>
                                             </div>
                                             <p>Map & Schedule</p>
                                             <div class="accordion_sign"> <img src="img/angle-down.svg" alt="arrow"> </div>
                                         </div>
                                         <div class="accoRtpanel">
-                                            <div class="inner-alert">
-                                                <h4> <img src="img/alert-white.svg" alt="alert-icon"> Service Alert</h4>
-                                                <p>
-                                                    SERVICE ALERT: Nullam interdum, enim aliquam lacinia interdum, ipsum risus ultrices nunc. <br>
-                                                </p>
-                                            </div>
+                                            <a href="#" class="btn_sm">Map and Schedule Details</a>
                                             <p>
-                                                <strong> Service Span:</strong> Wed, Sat, sun <br>
-                                                <strong> PM Peak:</strong> 35 Mins.
+                                                <strong> Service Span: Wed, Sat, sun <br>
+                                                PM Peak: 35 Mins.</strong>
                                             </p>
                                             <div class="document_era">
-                                                <a href="#" class="doc_block"> <img src="img/PDF.svg" alt="pdf"> <span> Schedule Download</span> </a>
+                                                <a href="#" class="doc_block btn_sm"> <img src="img/PDF.svg" alt="pdf"> <span>Schedule Download</span> </a>
                                             </div>
                                             <div class="destination_info">
-                                                <h4 class="h6">Popular Destinations</h4>
-                                                <p>
-                                                    Destination 1 <br> Destination 2 <br> Destination 3 <br> Destination 4
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accoRt_block">
-                                        <div class="rtTitle">
-                                            <div class="rtTitleWrap">
-                                                <h3> <span class="rtNo">01</span>Route Name</h3>
-                                            </div>
-                                            <p>Map & Schedule</p>
-                                            <div class="accordion_sign"> <img src="img/angle-down.svg" alt="arrow"> </div>
-                                        </div>
-                                        <div class="accoRtpanel">
-                                            <p>
-                                                <strong> Service Span:</strong> Wed, Sat, sun <br>
-                                                <strong> PM Peak:</strong> 35 Mins.
-                                            </p>
-                                            <div class="document_era">
-                                                <a href="#" class="doc_block"> <img src="img/PDF.svg" alt="pdf"> <span> Schedule Download</span> </a>
-                                            </div>
-                                            <div class="destination_info">
-                                                <h4 class="h6">Popular Destinations</h4>
+                                                <h4>Popular Destinations</h4>
                                                 <p>
                                                     Destination 1 <br> Destination 2 <br> Destination 3 <br> Destination 4
                                                 </p>
@@ -294,6 +262,71 @@
                                         </div>
                                     </div>
                                 </div>
+                                
+                                <h3>Local Services</h3>
+                                <div class="routeAccdn">
+                                    <div class="accoRt_block">
+                                        <div class="rtTitle">
+                                            <div class="rtTitleWrap">
+                                                <div class="alerticon">
+                                                    <img src="img/alert-icon.svg" alt="">
+                                                </div>
+                                                <h3> <!--<span class="rtNo">01</span>-->Highland/U.S. 1/Brightpoint</h3>
+                                            </div>
+                                            <p>Map & Schedule</p>
+                                            <div class="accordion_sign"> <img src="img/angle-down.svg" alt="arrow"> </div>
+                                        </div>
+                                        <div class="accoRtpanel">
+                                            <div class="inner-alert">
+                                                <h4> <img src="img/alert-white.svg" alt="alert-icon">!!!Service Alert:</h4>
+                                                <p>
+                                                    Welcome to the Lorem Ipsum Generator Pro, the ultimate source of placeholder text for all your design needs. Whether you're creating a website, designing a brochure, or crafting the next great novel, our nonsensical text will help you fill in those empty spaces with style.
+                                                </p>
+                                                <a href="#">Learn More</a>
+                                            </div>
+                                            <a href="#" class="btn_sm">Map and Schedule Details</a>
+                                            <p>
+                                                <strong> Service Span: Wed, Sat, sun <br>
+                                                PM Peak: 35 Mins.</strong>
+                                            </p>
+                                            <div class="document_era">
+                                                <a href="#" class="doc_block btn_sm"> <img src="img/PDF.svg" alt="pdf"> <span>Schedule Download</span> </a>
+                                            </div>
+                                            <div class="destination_info">
+                                                <h4>Popular Destinations</h4>
+                                                <p>
+                                                    Destination 1 <br> Destination 2 <br> Destination 3 <br> Destination 4
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accoRt_block">
+                                        <div class="rtTitle">
+                                            <div class="rtTitleWrap">
+                                                <h3> <!--<span class="rtNo">01</span>-->Chamberlayne/Downtown</h3>
+                                            </div>
+                                            <p>Map & Schedule</p>
+                                            <div class="accordion_sign"> <img src="img/angle-down.svg" alt="arrow"> </div>
+                                        </div>
+                                        <div class="accoRtpanel">
+                                            <a href="#" class="btn_sm">Map and Schedule Details</a>
+                                            <p>
+                                                <strong> Service Span: Wed, Sat, sun <br>
+                                                PM Peak: 35 Mins.</strong>
+                                            </p>
+                                            <div class="document_era">
+                                                <a href="#" class="doc_block btn_sm"> <img src="img/PDF.svg" alt="pdf"> <span>Schedule Download</span> </a>
+                                            </div>
+                                            <div class="destination_info">
+                                                <h4>Popular Destinations</h4>
+                                                <p>
+                                                    Destination 1 <br> Destination 2 <br> Destination 3 <br> Destination 4
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -301,19 +334,34 @@
             </div>
         </div>
     </div>
-    <footer class="footer ">
-        <div class="bg-footer">
-            <img src="img/footer-bg.svg" alt=" footer background">
-        </div>
+
+    <!-- ============================= Footer Start ================================== -->
+    <footer class="footer">
         <div class="footer-content">
-            <div class="container ">
-                <div class="footer-row row ">
-                    <div class="foot_col  ">
-                        <div class="foot_logo ">
-                            <img src="img/footer-logo.svg " alt="logo ">
+            <div class="container">
+                <div class="footer-row row">
+                    <div class="foot_col">
+                        <div class="foot_logo">
+                            <img src="img/footer-logo.png " alt="logo">
                         </div>
-                        <h2>Connect</h2>
-                        <div class="foot_media ">
+                    </div>
+                    <div class="foot_col">
+                        <div class="foo_info">
+                            <p><a href="#">(804) 358-4782</a></p>
+                            <p><a href="#">webcustomerservice@ridegrtc.com</a></p>
+                            <p><a href="#">Contact Customer Service</a></p>
+                        </div>
+                        <div class="footmenu">
+                            <ul class=" ">
+                                <li> <a href="# ">GRTC App</a> </li>
+                                <li> <a href="# ">Bus Tracking</a></li>
+                                <li> <a href="# ">GTFS Information</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="foot_col">
+                        <h2>CONNECT WITH US ON SOCIAL!</h2>
+                        <div class="foot_media">
                             <ul>
                                 <li>
                                     <a href=""><img src="img/facebook.svg" alt=""> </a>
@@ -333,42 +381,15 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="foot_col   ">
-                        <div class="foo_info">
-                            <h2>Route Information:</h2>
-                            <a href="#">1-925-754-4040</a>
-                        </div>
-                        <div class="foo_info">
-                            <h2>Lost and Found:</h2>
-                            <a href="#">1-925-754-6622</a>
-                        </div>
-                        <div class="foo_info">
-                            <h2>Customer Service:</h2>
-                            <a href="#">1-925-754-6622</a>
-                        </div>
-                    </div>
-                    <div class="foot_col  ">
-                        <div class="footmenu ">
-                            <ul class=" ">
-                                <li> <a href="# ">Local and Express Routes</a> </li>
-                                <li> <a href="# ">Fares & Guides</a></li>
-                                <li> <a href="# ">Tri MyRide</a></li>
-                                <li> <a href="# ">Paratransit</a></li>
-                                <li> <a href="# ">Work With Us</a></li>
-                                <li> <a href="# ">Contact Us</a></li>
-                                <li> <a href="# ">Report a Safety or Other Issue</a></li>
-                                <li> <a href="# ">About</a></li>
-                                <li> <a href="# ">Career Opportunities</a></li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
-                <div class="copyright ">
-                    <p>©Tri Delta Transit 2024 | Privacy Policy</p>
+                <div class="copyright">
+                    <p>© 2024 GRTC Transit System   |   Privacy Policy</p>
                 </div>
             </div>
         </div>
     </footer>
+    <!-- ============================= Footer End ================================== -->
+
     <script src="js/jquery.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>

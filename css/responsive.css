@@ -84,6 +84,12 @@
   .main_wrapper .advgb-tabs-wrapper.advgb-tab-horz-desktop ul.advgb-tabs-panel .advgb-tab a {
     font-size: 16px;
   }
+  .advgb-tabs-wrapper.advgb-tab-stack-mobile .advgb-tab-body-wrapper .advgb-tab-body-container {
+    margin-bottom: 0 !important;
+  }
+  .advgb-tabs-wrapper.advgb-tab-vert-desktop div.advgb-tab-body {
+    padding: 60px 40px;
+  }
   .fixed_btns ul li a {
     padding: 6px 2px;
     min-width: 100px;
@@ -104,7 +110,13 @@
     min-height: 10px;
   }
   .tripPlanner_wrap {
-    bottom: 20px;
+    bottom: auto;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .tripPlanner .nav-tabs .nav-item {
     width: 50%;
@@ -114,6 +126,9 @@
   }
   .tripPlanner .tab-content {
     padding: 25px 10px;
+  }
+  .tripPlanner .tab-content label {
+    left: 25px;
   }
   .tripPlanner .search_wrap {
     display: flex;
@@ -372,6 +387,15 @@
     font-size: 30px;
     line-height: 35px;
   }
+  .main_banner {
+    margin-top: 106px;
+  }
+  .main_banner .carousel:before {
+    background: #F1F1F2;
+  }
+  .main_banner .carousel-inner {
+    display: none;
+  }
   .main_banner .btn_banner {
     background: #F1F1F2;
     border-color: #F1F1F2;
@@ -382,6 +406,12 @@
   .main_banner .carousel-control-next,
   .main_banner .carousel-control-prev {
     display: none;
+  }
+  .main_header.home-header {
+    background: #5F249F;
+  }
+  .main_header.home-header .navbar-brand img {
+    max-width: 209px;
   }
   .main_header .navbar-brand {
     font-size: 6px;
@@ -570,10 +600,6 @@
   }
 }
 @media (min-width: 1200px) {
-  .wp-block-media-text.alignfull {
-    padding-left: 70px !important;
-    padding-right: 70px !important;
-  }
   .navbar-expand-xl .navbar-nav {
     margin-right: -15px;
   }
@@ -701,7 +727,7 @@
   .navbar-toggler .icon-bar {
     width: 25px;
     height: 2px;
-    background: #0057B7;
+    background: #ffffff;
     display: block;
     margin-bottom: 5px;
     border-radius: 100px;
@@ -844,6 +870,12 @@
   .img_buttons + .wp-block-buttons {
     max-width: 1400px;
     padding: 0px 8px;
+  }
+}
+@media (min-width: 1441px) {
+  .wp-block-media-text.alignfull {
+    padding-left: 70px !important;
+    padding-right: 70px !important;
   }
 }
 @media (min-width: 2100px) {
