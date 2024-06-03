@@ -255,7 +255,7 @@ video {
 
 .form-control {
   border: 0;
-  min-height: 40px;
+  min-height: 50px;
   border-radius: 0px;
   background-color: #ffffff;
 }
@@ -272,7 +272,7 @@ video {
 }
 
 select {
-  min-height: 45px;
+  min-height: 50px;
   background-image: url(../img/angle-down.svg);
   background-repeat: no-repeat;
   -webkit-appearance: none;
@@ -916,10 +916,11 @@ label.title {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .tripPlanner .tab-content label {
-  top: 9px;
+  top: 15px;
   left: 15px;
   font-size: 14px;
   font-weight: 700;
+  margin-bottom: 0;
   position: absolute;
 }
 .tripPlanner .tab-content .dep_ifo select {
@@ -952,7 +953,6 @@ label.title {
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  font-weight: 600;
   min-width: 140px;
   padding: 8px 20px;
   border-radius: 5px;
@@ -1043,14 +1043,25 @@ label.title {
   margin: auto;
 }
 
+.alertlists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .alertlists {
+    display: block;
+  }
+}
 .alertlists .alert-title {
   display: flex;
   justify-content: space-between;
   margin-top: -12px;
 }
 .alertlists .alert-title a {
-  font-family: "Proxima Nova", sans-serif;
   color: #000000;
+  font-family: "Proxima Nova", sans-serif;
   text-decoration: underline;
 }
 .alertlists span.h6 {
@@ -1069,20 +1080,31 @@ label.title {
   padding: 0px;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 12px;
+  margin: 0 !important;
 }
 .alertlists ul li {
-  font-size: 12px;
-  font-weight: 700;
-  font-family: "Proxima Nova", sans-serif;
-  background: #ECECEC;
-  padding: 6px;
-  margin-right: 5px;
-  margin-bottom: 6px;
-  border-radius: 3px;
+  padding: 0;
+  margin: 0;
 }
-.alertlists ul li.active {
+@media (max-width: 992px) {
+  .alertlists ul li {
+    margin-bottom: 20px;
+  }
+}
+
+.alertTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 11px;
+  margin-right: 32px;
+  height: 54px;
+  min-width: 54px;
+  text-align: center;
+}
+.alertTag h4 {
   color: #ffffff;
+  margin-bottom: 0;
 }
 
 .gobtn {
@@ -4021,6 +4043,15 @@ body .is-layout-constrained > .wp-block-group {
 .innerHero .map_wrap {
   width: 100%;
 }
+.innerHero .map_wrap .inner-alert {
+  position: absolute;
+  top: 0;
+  max-width: 645px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 .innerHero > img {
   min-height: 500px;
   width: 100%;
@@ -4028,35 +4059,41 @@ body .is-layout-constrained > .wp-block-group {
      object-fit: cover;
 }
 .innerHero .fixmapAlert {
-  position: absolute;
-  bottom: 0px;
   display: flex;
   margin: auto;
   text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
   flex-wrap: wrap;
+  /*a {
+      margin-right: 0;
+      @media (max-width: 767px) {
+          margin-bottom: 5px;
+      }
+  }*/
 }
-.innerHero .fixmapAlert a {
-  margin-right: 5px;
-}
-@media (max-width: 767px) {
-  .innerHero .fixmapAlert a {
-    margin-bottom: 5px;
-  }
+.innerHero .fixmapAlert .btn_sm {
+  min-width: 282px;
 }
 .innerHero .alert-left {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
-.innerHero .alert-left a {
-  color: #ffffff;
-  font-weight: 700;
-  padding: 14px 20px;
+.innerHero .alert-left a:not(.btn_sm) {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FCEA7B;
 }
-.innerHero .alert-left a img {
-  margin-right: 5px;
+.innerHero .alert-left a:not(.btn_sm) img {
+  width: 31px;
+  height: 31px;
+  filter: grayscale(100) brightness(0.1);
 }
 .innerHero .alert {
   background: #F48737;
@@ -4117,6 +4154,7 @@ body .is-layout-constrained > .wp-block-group {
 .RouteWraper {
   padding-top: 60px;
   padding-bottom: 50px;
+  background: #F1F1F2;
 }
 .RouteWraper .container {
   max-width: 1200px;
@@ -4125,11 +4163,16 @@ body .is-layout-constrained > .wp-block-group {
   margin-bottom: 30px;
   padding-top: 5px;
 }
+.RouteWraper .leftColumn .doc_block.btn_sm {
+  width: 100%;
+}
 .RouteWraper .leftScFtr {
   padding-top: 45px;
 }
-.RouteWraper .leftScFtr .doc_block.btn_sm {
-  width: 100%;
+@media (max-width: 767px) {
+  .RouteWraper .leftScFtr {
+    padding-top: 0;
+  }
 }
 .RouteWraper .select2-container .select2-selection--single {
   height: 35px;
@@ -4188,25 +4231,29 @@ body .is-layout-constrained > .wp-block-group {
 .route-info-wrap {
   margin-bottom: 50px;
 }
+.route-info-wrap h3 {
+  margin-top: 34px;
+  margin-bottom: 34px;
+}
+.route-info-wrap h3:first-child {
+  margin-top: 0px;
+  margin-bottom: 18px;
+}
 .route-info-wrap h2 {
   margin-bottom: 30px;
 }
-.route-info-wrap .routeAccdn {
-  padding-top: 10px;
-}
-
 .accoRt_block {
   margin-bottom: 16px;
 }
 .accoRt_block .rtTitle {
   display: flex;
   align-items: center;
-  min-height: 55px;
-  padding: 8px 15px;
+  min-height: 54px;
+  padding: 0px 15px;
   position: relative;
   cursor: pointer;
   padding-right: 60px;
-  padding-left: 45px;
+  padding-left: 0;
   background: #ffffff;
   justify-content: space-between;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -4255,9 +4302,10 @@ body .is-layout-constrained > .wp-block-group {
 .accoRt_block .rtTitleWrap {
   display: flex;
   align-items: center;
+  min-height: 54px;
 }
 .accoRt_block .rtTitleWrap + p {
-  min-width: 110px;
+  min-width: 130px;
   font-weight: 700;
 }
 .accoRt_block .rtDots {
@@ -4277,13 +4325,52 @@ body .is-layout-constrained > .wp-block-group {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: -15px;
+  left: -20px;
   top: 13px;
   background: #FCEA7B;
 }
 .accoRt_block .alerticon img {
   width: 19px;
   filter: grayscale(100) brightness(0.1);
+}
+.accoRt_block.rt_closed {
+  position: relative;
+}
+.accoRt_block.rt_closed .rtTitle::before {
+  content: "";
+  border-bottom: solid 2px #890606;
+  width: 45%;
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+@media (max-width: 992px) {
+  .accoRt_block.rt_closed .rtTitle::before {
+    width: 70%;
+  }
+}
+.accoRt_block.rt_closed .alertTag {
+  background: #878588 !important;
+}
+.accoRt_block.rt_closed .alertTag h4 {
+  color: #ffffff !important;
+}
+.accoRt_block.rt_closed .rtTitleWrap {
+  padding-left: 54px;
+  background-image: url(../img/icon-rt_closed.svg);
+  background-repeat: no-repeat;
+  background-position: top 50% left 6px;
+}
+.accoRt_block.rt_snow {
+  position: relative;
+}
+.accoRt_block.rt_snow .rtTitleWrap {
+  padding-left: 54px;
+  background-image: url(../img/icon-snow.svg);
+  background-repeat: no-repeat;
+  background-position: top 50% left 10px;
 }
 
 .inner-alert {
@@ -4328,9 +4415,14 @@ body .is-layout-constrained > .wp-block-group {
 .accoRtpanel .btn_sm:not(.doc_block) {
   margin-bottom: 20px;
 }
-
-.destination_info {
-  padding-top: 15px;
+.accoRtpanel p:last-child {
+  margin-bottom: 0;
+}
+.accoRtpanel .doc_block.btn_sm {
+  background: #000000;
+}
+.accoRtpanel .doc_block.btn_sm:hover {
+  background: #5F249F;
 }
 
 .centerInfo {
@@ -4339,22 +4431,35 @@ body .is-layout-constrained > .wp-block-group {
   padding-bottom: 40px;
   padding-top: 40px;
 }
+.centerInfo p:last-child {
+  margin-bottom: 0;
+}
 .centerInfo .btn_sm {
   display: table;
   margin-left: auto;
   margin-right: auto;
 }
 
+.route-detail-info {
+  margin-bottom: 100px;
+}
 .route-detail-info .container {
   max-width: 1200px;
 }
+.route-detail-info .leftColumn .doc_block.btn_sm {
+  width: 100%;
+}
+.route-detail-info .leftColumn .inner-alert {
+  padding: 24px;
+  margin-left: 0;
+  margin-right: 0;
+}
 
 .generic_form-news {
-  padding: 25px 25px;
+  padding: 32px;
   background: #5F249F;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1607843137);
 }
-.generic_form-news h2,
+.generic_form-news h4,
 .generic_form-news p,
 .generic_form-news p a {
   color: #ffffff;
@@ -4365,6 +4470,12 @@ body .is-layout-constrained > .wp-block-group {
 }
 .generic_form-news p {
   margin-bottom: 15px;
+}
+.generic_form-news .btn_sm {
+  font-weight: 600;
+  margin-top: 20px;
+  background: #ffffff;
+  color: #5F249F;
 }
 
 .general-tabs {
@@ -4466,7 +4577,7 @@ body .is-layout-constrained > .wp-block-group {
   padding: 10px 20px;
   padding-right: 40px;
   position: relative;
-  min-height: 55px;
+  min-height: 54px;
   display: flex;
   align-items: center;
   cursor: pointer;

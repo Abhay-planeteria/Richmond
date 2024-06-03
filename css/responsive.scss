@@ -668,9 +668,9 @@
     }
     .accoRt_block .rtTitleWrap {
         width: 100%;
-        padding-bottom: 6px;
-        p {
-            padding-left: 30px;
+        //padding-bottom: 6px;
+        +p {
+            display: none;
         }
     }
 }
