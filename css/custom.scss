@@ -4657,10 +4657,14 @@ body .is-layout-constrained>.wp-block-group {
 
 //Route Detail
 .centerInfo {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
     padding-bottom: 40px;
     padding-top: 40px;
+    background: $primary;
+    .container{
+        max-width: 900px;
+    }
     p:last-child{
         margin-bottom: 0;
     }
@@ -4672,7 +4676,8 @@ body .is-layout-constrained>.wp-block-group {
 }
 
 .route-detail-info {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
+    background: $primary;
     .container {
         max-width: 1200px;
     }
@@ -4708,35 +4713,59 @@ body .is-layout-constrained>.wp-block-group {
         margin-top: 20px;
         background: $white;
         color: $secondary;
+        padding: 10px 32px;
+        border: 5px solid transparent;
+        &:hover{
+            color: $white;
+            background: $secondary;
+            border: 5px solid $white;
+        }
     }
 }
 
 .general-tabs {
     background: $white;
+    border-radius: 5px 5px 0 0;
     .nav-tabs {
-        border-bottom: 1px solid $black;
+        border: 0;
+        margin-bottom: 0;
     }
     .nav-tabs .nav-item {
+        width: 33.333%;
+        border: 1px solid #EAEAEA;
+        border-right: 0;
+        margin-bottom: 0;
+        &:last-child{
+            border-right: 1px solid #EAEAEA;
+            a{
+                border-radius: 0 5px 0 0;
+            }
+        }
+        &:first-child{
+            a{
+                border-radius: 5px 0 0 0;
+            }
+        }
         a {
-            font-size: 21px;
-            color: $black;
+            color: $white;
+            background: $black;
             text-align: center;
             padding: 12px 10px;
-            //background: $secondary;
             border-radius: 0px;
-            min-width: 300px;
-            @include proxima;
-            border: 1px solid $black;
+            &:hover{
+                background: $secondary;
+            }
             &.active {
-                background: $black;
-                color: $white;
-                border-color: $black;
+                color: $black;
+                background: $white;
             }
         }
     }
     .tab-content {
-        padding-top: 25px;
-        padding-bottom: 80px;
+        padding: 24px;
+        .container{
+            padding: 0;
+        }
     }
 }
 
@@ -4763,18 +4792,20 @@ body .is-layout-constrained>.wp-block-group {
         align-items: center;
         font-size: 14px;
         font-weight: 600;
-        border: 1px solid $black;
-        line-height: 28px;
+        //border: 1px solid $black;
+        border-radius: 5px;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
         .form-control {
             border: 0;
             border-bottom: 0;
             color: $black;
             font-weight: normal;
-            padding-left: 0;
-            padding-bottom: 0px !important;
-            border-radius: 0;
             font-size: 14px;
-            text-align: center;
+            border-radius: 5px;
+            text-align: left;
+            &:focus{
+                box-shadow: none;
+            }
         }
     }
     .to-text {
@@ -4809,13 +4840,15 @@ body .is-layout-constrained>.wp-block-group {
 
 .stTitle {
     //background: $secondary;
-    padding: 10px 20px;
+    padding: 0;
     padding-right: 40px;
     position: relative;
-    min-height: 54px;
+    min-height: 50px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    background: $white;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     .accordion-sign {
         position: absolute;
         right: 15px;
@@ -4832,32 +4865,80 @@ body .is-layout-constrained>.wp-block-group {
     &.active .accordion-sign {
         transform: rotate(180deg);
     }
-    &:hover {
-        background: $blue;
-        h3 {
+    .stTitle-tag{
+        width: 42px;
+        height: 42px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 8px;
+        margin-right: 8px;
+        h4{
             color: $white;
-        }
-        .accordion-sign {
-            img {
-                @include img-white;
-            }
+            margin-bottom: 0;
         }
     }
 }
 
 .accostpanel {
+    display: none;
     padding: 15px 20px;
     padding-bottom: 15px;
-    display: none;
     //background: $secondary;
+    table {
+        tr{
+            background: #FAF9FA;
+        }
+        td {
+            border: 0;
+            padding: 8px;
+            text-align: center;
+            border: 0;
+            a {
+                font-weight: 700;
+                color: $green;
+                @include proxima;
+            }
+        }
+    }
 }
 
 .accostp_block {
-    margin-bottom: 6px;
+    margin-bottom: 16px;
+    &.rt_closed{
+        position: relative;
+        .stTitle::before{
+            content: "";
+            border-bottom: solid 2px #890606;
+            width: 45%;
+            position: absolute;
+            left: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            @media (max-width: 992px) {
+                width: 70%;
+            }
+        }
+        .stTitle-tag{
+            background: #878588 !important;
+            h4{
+                color: $white !important;
+            }
+        }
+        .stTitle{
+            padding-left: 42px;
+            background-image: url(../img/icon-rt_closed.svg);
+            background-size: 32px;
+            background-repeat: no-repeat;
+            background-position: top 50% left 6px;
+        }
+    }
 }
 
 .accostpanel table tbody tr:nth-of-type(2n) {
-    background-color: $white;
+    background-color: #F1F1F2;
 }
 
 .accostpanel table {
@@ -4865,51 +4946,55 @@ body .is-layout-constrained>.wp-block-group {
         padding: 8px;
         border: 0;
         text-align: center;
-        border: 1px solid $black;
         a {
             font-weight: 700;
-            color: $green;
+            color: $secondary;
             @include proxima;
         }
     }
 }
 
 .tooltip-inner {
-    background-color: $blue;
+    background-color: $white;
     box-shadow: 0px 0px 3px #00000029;
     border: 1px solid #dbdbdb;
     border-radius: 0px;
-    color: $white;
+    color: $black;
     padding: 10px 10px;
     font-size: 16px;
     min-width: 260px;
+    opacity: 1;
 }
 
 .tooltip.bs-tooltip-right .arrow:before {
-    border-right-color: $blue !important;
+    border-right-color: $white !important;
+    box-shadow: 0px 0px 3px #00000029;
 }
 
-.tooltip.bs-tooltip-left .arrow:before {
-    border-left-color: $blue !important;
+.tooltip.bs-tooltip-left .white:before {
+    border-left-color: $white !important;
+    box-shadow: 0px 0px 3px #00000029;
 }
 
 .tooltip.bs-tooltip-bottom .arrow:before {
-    border-bottom-color: $blue !important;
+    border-bottom-color: $white !important;
+    box-shadow: 0px 0px 3px #00000029;
 }
 
 .tooltip.bs-tooltip-top .arrow:before {
-    border-top-color: $blue !important;
+    border-top-color: $white !important;
+    box-shadow: 0px 0px 3px #00000029;
 }
 
 .tooltip .arrow:before {
     content: "";
     position: absolute;
-    background: $blue;
+    background: $white;
     width: 24px;
     height: 24px;
     transform: translateX(-50%) rotate(45deg);
     z-index: 2;
-    border: 1px solid $blue;
+    border: 1px solid $white;
     border-width: 0 1px 1px 0;
     border-top-left-radius: 100%;
     margin-left: 10px;
