@@ -1616,6 +1616,11 @@ input[type=checkbox] {
   margin-bottom: 0;
   text-transform: uppercase;
 }
+.footer-content .foot_col h2 span {
+  color: #78BE20;
+  margin-right: 6px;
+  letter-spacing: -6px;
+}
 .footer-content .foot_media {
   display: flex;
   padding-top: 10px;
@@ -4640,6 +4645,10 @@ body .is-layout-constrained > .wp-block-group {
   margin-left: 0;
   margin-right: 0;
 }
+.route-detail-info .leftColumn .inner-alert button.close {
+  top: 24px;
+  right: 24px;
+}
 
 .generic_form-news {
   padding: 32px;
@@ -5043,6 +5052,7 @@ body .is-layout-constrained > .wp-block-group {
   font-size: 18px;
 }
 .rt-modal .modal-content {
+  background: #F1F1F2;
   border-radius: 0px;
   border: 0;
 }
