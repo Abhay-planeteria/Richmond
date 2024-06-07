@@ -5,15 +5,88 @@
 @import "breakpoints";
 //componenets (button, anchor tags, heading tags etc)
 
-/*================================= Futura PT Heavy Start =======================================*/
+/*================================= Futura PT Start =======================================*/
+@font-face {
+    font-family: 'Futura PT Book';
+    src: url('../fonts/FuturaPT-Book.eot');
+    src: url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'), url('../fonts/FuturaPT-Book.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Book.woff') format('woff'), url('../fonts/FuturaPT-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @font-face {
     font-family: 'Futura PT';
-    src: url('../fonts/FuturaPT-Heavy.woff2') format('woff2'), url('../fonts/FuturaPT-Heavy.woff') format('woff');
+    src: url('../fonts/FuturaPT-Bold.eot');
+    src: url('../fonts/FuturaPT-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/FuturaPT-Bold.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Bold.woff') format('woff'), url('../fonts/FuturaPT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-Heavy.eot');
+    src: url('../fonts/FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'), url('../fonts/FuturaPT-Heavy.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Heavy.woff') format('woff'), url('../fonts/FuturaPT-Heavy.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
-/*================================= Futura PT Heavy End =======================================*/
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-Medium.eot');
+    src: url('../fonts/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/FuturaPT-Medium.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Medium.woff') format('woff'), url('../fonts/FuturaPT-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+/*================================= Futura PT End =======================================*/
+/*================================= Futura STD Start =======================================*/
+@font-face {
+    font-family: 'Futura Std';
+    src: url('../fonts/FuturaStd-Book.woff2') format('woff2'), url('../fonts/FuturaStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('../fonts/FuturaStd-Heavy.woff2') format('woff2'), url('../fonts/FuturaStd-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('../fonts/FuturaStd-Bold.woff2') format('woff2'), url('../fonts/FuturaStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('../fonts/FuturaStd-Medium.woff2') format('woff2'), url('../fonts/FuturaStd-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('../fonts/FuturaStd-Light.woff2') format('woff2'), url('../fonts/FuturaStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+/*================================= Futura STD End =======================================*/
 /*================================= Proxima Nova Start =======================================*/
 @font-face {
     font-family: 'Proxima Nova Rg';
@@ -47,6 +120,40 @@
     font-display: swap;
 }
 /*================================= Proxima Nova End =======================================*/
+/*================================= Inter Start =======================================*/
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.woff2') format('woff2'), url('../fonts/Inter-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Light.woff2') format('woff2'), url('../fonts/Inter-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.woff2') format('woff2'), url('../fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'), url('../fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*================================= Inter End =======================================*/
+
 
 body {
     color: $black;
@@ -241,6 +348,13 @@ strong {
         margin-right: 10px;
     }
 }
+button{
+    &:focus{
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+}
 
 .container {
     max-width: 1200px;
@@ -323,6 +437,18 @@ select {
 label.title {
     font-weight: 700;
     @include proxima;
+}
+.input-group>.form-control[type=checkbox],
+input[type=checkbox]{
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 4px;
+    flex: none;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #D1D0D2;
 }
 
 ::-webkit-input-placeholder {
@@ -827,13 +953,27 @@ label.title {
         }
     }
     .carousel-caption {
-        left: 10%;
-        right: 10%;
+        left: 160px;
+        right: auto;
+        padding: 0;
         text-align: left;
-        top: 50%;
-        max-width: 650px;
-        bottom: auto;
-        transform: translateY(-50%);
+        top: auto;
+        max-width: 370px;
+        bottom: 300px;
+        transform: none;
+        img{
+            width: fit-content;
+            max-height: fit-content;
+            min-height: auto;
+            object-fit: none;
+        }
+        p{
+            color: $white;
+            margin-bottom: 0;
+            margin-top: 12px;
+            padding-top: 8px;
+            border-top: 1px solid $white;
+        }
     }
     .carousel-control-next {
         width: auto;
@@ -892,8 +1032,8 @@ label.title {
             background: $black;
             text-align: center;
             &:hover {
-                color: $black;
-                background: rgba(255, 255, 255, 0.95);
+                color: $white;
+                background: $secondary;
             }
             &.active {
                 color: $black;
@@ -968,7 +1108,7 @@ label.title {
 
     }
     select {
-        background-image: url(../img/angle-down-black.svg);
+        background-image: url(../img/angle-down.svg);
         background-repeat: no-repeat;
         background-position: right 12px top 12px;
         min-width: 110px;
@@ -1165,6 +1305,11 @@ label.title {
         background: $white;
         margin-bottom: 20px;
         //box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    }
+    .navblock_txt{
+        h3{
+            font-size: 20px;
+        }
     }
     p {
         margin-bottom: 0px;
@@ -1413,6 +1558,8 @@ label.title {
         margin: 0;
         left: auto;
         bottom: -60px;
+        padding-left: 32px;
+        padding-right: 32px;
         li {
             border: 0;
             width: 20px;
@@ -1425,6 +1572,12 @@ label.title {
                 background: $secondary;
             }
         }
+        .carousel-control-prev,
+        .carousel-control-next{
+            opacity: 1;
+            width: 20px;
+        }
+
     }
 }
 
@@ -1439,8 +1592,10 @@ label.title {
         padding: 50px 15px;
     }
     .slider-main .carousel-indicators{
-        left: 0;
+        left: 50%;
         bottom: -40px;
+        width: fit-content;
+        transform: translateX(-50%);
     }
     .slider-main .slider_content{
         margin-top: 20px;
@@ -1542,6 +1697,7 @@ label.title {
             height: 35px;
             @include all;
             background-color: $white;
+            transition: all 0.3s ease-in-out;
             img {
                 min-height: 14px;
                 max-height: 14px;
@@ -1654,25 +1810,28 @@ label.title {
 }
 
 .main_breadcrumb {
-    padding-top: 15px;
+    padding-top: 13px;
     @include proxima;
     .breadcrumb {
         background: none;
         margin: 0px;
-        padding-left: 10px;
-        padding-right: 30px;
-        font-size: 16px;
+        padding-left: 0px;
+        padding-right: 0px;
         padding-top: 6px;
         padding-bottom: 6px;
         align-items: center;
         a {
-            color: $secondary;
-            font-weight: normal;
+            font-size: 14px;
+            color: $black;
+            @include semi;
             text-decoration: none;
         }
         li.active {
-            color: $primary;
-            font-weight: 700;
+            color: $black;
+            @include regular;
+            font-size: 14px;
+            text-decoration: none;
+            line-height: 24px;
         }
         img {
             vertical-align: unset;
@@ -1681,14 +1840,14 @@ label.title {
     }
     .breadcrumb-item+.breadcrumb-item::before {
         content: "";
-        background: url(../img/angle-right.svg);
-        background-repeat: repeat;
+        background: url(../img/icon-breadcrumb.svg);
         background-repeat: no-repeat;
         margin-top: 4px;
-        margin-right: 6px;
-        margin-left: 3px;
-        padding-right: 5px;
-        padding-left: 5px;
+        margin-right: 8px;
+        margin-left: 8px;
+        padding-right: 0;
+        padding-left: 0;
+        width: 10px;
     }
     .breadcrumb-item+.breadcrumb-item {
         padding-left: 3px;
@@ -1697,17 +1856,21 @@ label.title {
 }
 
 .page_title {
-    padding-top: 50px;
+    padding-top: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
     position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
     h1 {
         position: relative;
         z-index: 9;
         display: table;
+        margin-bottom: 16px;
+        line-height: normal;
     }
     /*&::before {
         content: '';
@@ -1946,6 +2109,12 @@ label.title {
 .button_block {
     display: flex;
 }
+button.close{
+    opacity: 1;
+    position: absolute;
+    top: 32px;
+    right: 35px;
+}
 
 .img_buttons{
     //padding-bottom: 60px;
@@ -1957,81 +2126,75 @@ label.title {
         padding-right: 5px;
     }
     .img_block {
-        position: relative;
         overflow: hidden;
-        .img_block_title {
-            position: absolute;
-            background-color: $black;
-            padding: 15px 10px;
-            text-align: center;
-            z-index: 9;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: $black;
-            display: none;
-            h3 {
-                position: relative;
-                color: $white;
-                margin: 0px;
-                display: flex;
-                align-items: center;
-                img {
-                    width: auto;
-                }
-            }
-            p {
-                color: $white;
-            }
-        }
+        position: relative;
         img {
             width: 100%;
         }
         //&:hover {}
+        .overlayBgColor{
+            left: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            display: none;
+            background-color: rgba(95,36,159,0.6);
+        }
         .img_block_descr {
+            top: 0;
             left: 0;
             width: 100%;
-            bottom: 10px;
+            bottom: auto;
             height: 100%;
             color: $white;
             text-align: center;
-            padding: 10px 25px;
             position: absolute;
-            transform: translateY(calc(100% - 50px));
-            //transition: transform 0.5s ease;
-            transition: all 0.3s ease-in-out;
+            display: flex;
+            z-index: 2;
+            flex-direction: column;
+            justify-content: flex-end;
             p,
             h3 {
                 color: $white;
-                transition: all 0.3s ease-in-out;
-                img {
-                    width: auto;
-                    margin-left: 8px;
-                }
             }
             p {
                 font-weight: 500;
+                margin-bottom: 0;
+                padding: 10px 24px;
+                display: none;
             }
             h3 {
+                width: 100%;
+                bottom: 18px;
                 font-size: 20px;
+                margin: 0 auto;
+                padding: 0 15px;
+                position: absolute;
+                /* transform: translateY(calc(100% - 50px)); */
             }
         }
         &:hover {
             .img_block_descr {
-                bottom: 0;
                 display: flex;
                 justify-content: end;
                 flex-direction: column;
-                transform: translateY(0);
-                transition: all 0.3s ease-in-out;
-                //background: rgba(0, 0, 0, 0.8);
-                background: linear-gradient(0deg, rgba(95, 36, 159, 0.75), rgba(95, 36, 159, 0.75));
                 h3{
-                    top: -20%;
+                    bottom: 0;
                     @include underline;
                     position: relative;
-                    transition: all 0.3s ease-in-out;
+                    transform: translateY(0);
                 }
+                p{
+                    display: block;
+                }
+            }
+            .overlayBgColor{
+                display: block;
+                transition: background-color 10s ease-in-out;
             }
             .img_block_title {
                 display: none;
@@ -4286,8 +4449,16 @@ body .is-layout-constrained>.wp-block-group {
                 margin-bottom: 5px;
             }
         }*/
-        .btn_sm{
-            min-width: 282px;
+        .doc_block {
+            &.btn_sm{
+                min-width: 282px;
+                padding-top: 12px;
+                padding-bottom: 11px;
+                background: $secondary;
+                &:hover{
+                    background: $black;
+                }
+            }
         }
     }
     .alert-left {
@@ -4349,6 +4520,10 @@ body .is-layout-constrained>.wp-block-group {
         height: 600px !important;
         width: 100%;
     }
+    button.close {
+        top: 24px;
+        right: 26px;
+    }
 }
 
 .search-box {
@@ -4382,14 +4557,28 @@ body .is-layout-constrained>.wp-block-group {
         padding-top: 5px;
     }
     .leftColumn {
-        .doc_block.btn_sm{
-            width: 100%;
+        .doc_block {
+            &.btn_sm{
+                width: 100%;
+                padding-top: 12px;
+                padding-bottom: 11px;
+                background: $secondary;
+                &:hover{
+                    background: $black;
+                }
+            }
         }
     }
     .leftScFtr {
         padding-top: 45px;
         @media (max-width: 767px) {
             padding-top: 0;
+        }
+        .form-group .input-group:last-child{
+            .form-control[type=checkbox],
+            input[type=checkbox]{
+                margin-bottom: 0;
+            }
         }
     }
     .select2-container .select2-selection--single {
@@ -4404,6 +4593,7 @@ body .is-layout-constrained>.wp-block-group {
     h4 {
         color: $black;
         font-size: 16px;
+        margin-bottom: 16px;
     }
     .btn_sm {
         width: 100%;
@@ -4449,16 +4639,13 @@ body .is-layout-constrained>.wp-block-group {
 
 .route-info-wrap {
     margin-bottom: 50px;
-    h3{
+    h2{
         margin-top: 34px;
         margin-bottom: 34px;
         &:first-child{
             margin-top: 0px;
             margin-bottom: 18px;
         }
-    }
-    h2 {
-        margin-bottom: 30px;
     }
     .routeAccdn {
         
@@ -4482,8 +4669,10 @@ body .is-layout-constrained>.wp-block-group {
         h3 {
             margin: 0;
             display: flex;
-            align-items: center;
             font-size: 16px;
+            font-weight: 750;
+            align-items: center;
+            @include futura-std;
             .rtNo {
                 margin-right: 5px;
             }
@@ -4529,9 +4718,10 @@ body .is-layout-constrained>.wp-block-group {
         display: flex;
         align-items: center;
         min-height: 54px;
-        +p {
-            min-width: 130px;
+        +h6 {
             @include bold;
+            min-width: 130px;
+            margin-bottom: 0;
         }
     }
     .rtDots {
@@ -4600,6 +4790,7 @@ body .is-layout-constrained>.wp-block-group {
     padding: 32px 40px;
     margin: 0 -24px 24px;
     background: $alert-yellow;
+    position: relative;
     p {
         color: $black;
         margin-bottom: 5px;
@@ -4643,9 +4834,11 @@ body .is-layout-constrained>.wp-block-group {
     }
     .doc_block {
         &.btn_sm{
-            background: $black;
+            padding-top: 12px;
+            padding-bottom: 11px;
+            background: $secondary;
             &:hover{
-                background: $secondary;
+                background: $black;
             }
         }
     }
@@ -4682,8 +4875,16 @@ body .is-layout-constrained>.wp-block-group {
         max-width: 1200px;
     }
     .leftColumn {
-        .doc_block.btn_sm{
-            width: 100%;
+        .doc_block {
+            &.btn_sm{
+                width: 100%;
+                background: $secondary;
+                padding-top: 12px;
+                padding-bottom: 11px;
+                &:hover{
+                    background: $black;
+                }
+            }
         }
         .inner-alert{
             padding: 24px;
@@ -4750,7 +4951,7 @@ body .is-layout-constrained>.wp-block-group {
             color: $white;
             background: $black;
             text-align: center;
-            padding: 12px 10px;
+            padding: 14px 10px 15px;
             border-radius: 0px;
             &:hover{
                 background: $secondary;
@@ -4784,7 +4985,7 @@ body .is-layout-constrained>.wp-block-group {
 }
 
 .destination-info {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     .input-group-one {
         flex: 1;
         min-height: 50px;
@@ -4816,21 +5017,18 @@ body .is-layout-constrained>.wp-block-group {
         @include proxima;
     }
     .dest-row {
-        /*
-        padding: 0px 30px;
-        max-width: 700px;*/
         align-items: center;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .switch {
         text-align: center;
         a {
+            color: $black;
             font-weight: 700;
-            color: $primary;
+            font-size: 16px;
             text-decoration: none;
-            font-size: 14px;
             img {
                 margin-right: 6px;
             }
@@ -4859,8 +5057,10 @@ body .is-layout-constrained>.wp-block-group {
     }
     h3 {
         margin: 0px;
-        font-weight: 700;
+        line-height: normal;
         font-size: 16px;
+        font-weight: 750;
+        @include futura-std;
     }
     &.active .accordion-sign {
         transform: rotate(180deg);
@@ -4883,8 +5083,7 @@ body .is-layout-constrained>.wp-block-group {
 
 .accostpanel {
     display: none;
-    padding: 15px 20px;
-    padding-bottom: 15px;
+    padding: 40px 24px 24px;
     //background: $secondary;
     table {
         tr{
@@ -4954,6 +5153,9 @@ body .is-layout-constrained>.wp-block-group {
     }
 }
 
+.tooltip.show{
+    z-index: 1;
+}
 .tooltip-inner {
     background-color: $white;
     box-shadow: 0px 0px 3px #00000029;
@@ -5003,20 +5205,39 @@ body .is-layout-constrained>.wp-block-group {
 
 .rt-modal {
     .modal-dialog {
-        max-width: 780px;
-        min-height: calc(100vh - 60px);
+        max-width: 1000px;
+        //min-height: calc(100vh - 60px);
         display: flex;
+        padding: 0 15px;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         overflow: auto;
+        margin-top: 137px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         @media(max-width: 768px) {
             min-height: calc(100vh - 20px);
         }
     }
     .rt-modal-info {
-        padding: 25px 25px;
+        padding: 55px 80px 72px;
         position: relative;
+        .rt-modal-title{
+            gap: 32px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+            h3,
+            h4{
+                @include futura-std;
+                font-weight: 500;
+                margin-bottom: 0;
+                text-decoration: underline;
+            }
+            h4{
+                text-decoration: none;
+            }
+        }
         .close {
             position: absolute;
             right: 5px;
@@ -5031,7 +5252,32 @@ body .is-layout-constrained>.wp-block-group {
             justify-content: center;
         }
         .accostp_block {
+            margin-bottom: 24px;
             pointer-events: none;
+            &:first-child .rt-time{
+                background: $green;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &.rt_closed{
+                .stTitle::before{
+                    display: none;
+                }
+                .stTitle-tag{
+                    margin-left: 16px;
+                    h4{
+                        color: $white !important;
+                    }
+                }
+                h3{
+                    color: #59585A;
+                }
+                .stTitle{
+                    background-size: 26px;
+                    background-position: top 50% left 24px;
+                }
+            }
             .accostpanel {
                 display: block !important;
                 padding-top: 5px !important;
@@ -5041,7 +5287,11 @@ body .is-layout-constrained>.wp-block-group {
             padding-top: 0px;
         }
         .stTitle {
-            padding-right: 80px;
+            min-height: 56px;
+            padding-right: 95px;
+            .stTitle-tag{
+                margin-left: 24px;
+            }
             h5 {
                 margin: 0px;
                 font-weight: 700;
@@ -5058,19 +5308,17 @@ body .is-layout-constrained>.wp-block-group {
     //.rt-modal-info .accostp_block .rt-time {}
     .rt-time {
         position: absolute;
-        right: 15px;
+        right: 0;
         top: 0;
-        min-height: 45px;
+        min-height: 100%;
         display: flex;
         align-items: center;
-        min-width: 90px;
+        min-width: 95px;
         text-align: center;
         justify-content: center;
-        font-weight: 700;
-        background: $primary;
-        color: $white;
-        @include proxima;
-        top: 5px;
+        color: $black;
+        @include inter;
+        font-weight: normal;
         text-transform: uppercase;
     }
 }

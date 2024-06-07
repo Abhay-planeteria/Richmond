@@ -307,6 +307,7 @@
     }
     .accostpanel {
         overflow: auto;
+        padding: 20px 15px;
     }
     .accostpanel table td {
         font-size: 12px;
@@ -487,10 +488,10 @@
     .contactcard_row {
         margin: 0px;
     }
-    .main_wrapper .main_breadcrumb .breadcrumb {
+    /*.main_wrapper .main_breadcrumb .breadcrumb {
         padding-left: 20px;
         padding-right: 20px;
-    }
+    }*/
     .newsRow .newsColumn,
     .news-grid .newsColumn {
         width: 100%;
@@ -590,6 +591,17 @@
 @media (min-width:768px) and (max-width:1200px) {
     .main_banner .carousel-item img {
         min-height: 500px;
+    }
+    .main_banner .carousel-caption img{
+        min-height: fit-content;
+        max-height: 50px;
+        object-fit: cover;
+    }
+    .main_banner .carousel-caption{
+        left: 20px;
+    }
+    .main_banner .carousel-caption{
+        bottom: 270px;
     }
 }
 @media (min-width:768px) and (max-width:992px) {
@@ -1057,8 +1069,7 @@
 }
 
 @media (min-width:1430px) {
-    .main_header .container,
-    .main_breadcrumb .container {
+    .main_header .container {
         padding-left: 0px;
         padding-right: 0px;
     }
