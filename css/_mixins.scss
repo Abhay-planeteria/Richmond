@@ -5,7 +5,7 @@
     display: flex;
 }
 
-@mixin futura {
+@mixin futura-pt {
     font-family: 'Futura PT', sans-serif;
 }
 
@@ -15,6 +15,10 @@
 
 @mixin futura-std {
     font-family: "Futura Std", sans-serif;
+}
+
+@mixin futura {
+    font-family: "Futura", sans-serif;
 }
 
 @mixin inter {

@@ -87,6 +87,43 @@
     font-display: swap;
 }
 /*================================= Futura STD End =======================================*/
+/*================================= Futura Start =======================================*/
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/FuturaBT-BoldCondensed.woff2') format('woff2'), url('../fonts/FuturaBT-BoldCondensed.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/FuturaBT-LightCondensed.woff2') format('woff2'), url('../fonts/FuturaBT-LightCondensed.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/FuturaBT-Book.woff2') format('woff2'), url('../fonts/FuturaBT-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/FuturaBT-Medium.woff2') format('woff2'), url('../fonts/FuturaBT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/FuturaBT-Heavy.woff2') format('woff2'), url('../fonts/FuturaBT-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+/*================================= Futura End =======================================*/
 /*================================= Proxima Nova Start =======================================*/
 @font-face {
     font-family: 'Proxima Nova Rg';
@@ -1655,7 +1692,7 @@ input[type=checkbox]{
     p {
         color: $white;
         @include semi;
-        @include futura;
+        @include futura-pt;
         font-size: 16px;
         margin-bottom: 0;
         line-height: 20.51px;
@@ -1757,7 +1794,7 @@ input[type=checkbox]{
         p {
             margin: 0;
             @include semi;
-            @include futura;
+            @include futura-pt;
             font-size: 13px;
             line-height: 16px;
         }
@@ -2340,7 +2377,7 @@ button.close{
             color: $secondary;
             font-weight: 700;
             font-size: 24px;
-            @include futura;
+            @include futura-pt;
             border: 3px solid $secondary;
         }
         //.how_title {}
@@ -4558,7 +4595,7 @@ body .is-layout-constrained>.wp-block-group {
         max-width: 1200px;
     }
     .checkWraper {
-        margin-bottom: 30px;
+        margin-bottom: 24px;
         padding-top: 5px;
     }
     .leftColumn {
@@ -4620,6 +4657,7 @@ body .is-layout-constrained>.wp-block-group {
     color: $black;
     cursor: pointer;
     font-weight: 700;
+    margin-bottom: 14px;
 }
 
 .checkbox-custom+.checkbox-custom-label:before {
@@ -4628,18 +4666,19 @@ body .is-layout-constrained>.wp-block-group {
     border-radius: 0;
     display: inline-block;
     vertical-align: middle;
-    width: 14px;
-    height: 14px;
+    width: 24px;
+    height: 24px;
     padding: 2px;
-    margin-right: 10px;
+    margin-right: 16px;
+    border-radius: 4px;
     text-align: center;
-    border: 2px solid $primary;
+    border: 1px solid #D1D0D2;
 }
 
 .checkbox-custom:checked+.checkbox-custom-label:before {
     content: "";
     display: inline-block;
-    background: #2E71A2
+    background: $secondary;
 }
 
 .route-info-wrap {

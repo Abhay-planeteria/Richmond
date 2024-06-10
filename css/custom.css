@@ -73,6 +73,43 @@
   font-display: swap;
 }
 /*================================= Futura STD End =======================================*/
+/*================================= Futura Start =======================================*/
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaBT-BoldCondensed.woff2") format("woff2"), url("../fonts/FuturaBT-BoldCondensed.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaBT-LightCondensed.woff2") format("woff2"), url("../fonts/FuturaBT-LightCondensed.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaBT-Book.woff2") format("woff2"), url("../fonts/FuturaBT-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaBT-Medium.woff2") format("woff2"), url("../fonts/FuturaBT-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaBT-Heavy.woff2") format("woff2"), url("../fonts/FuturaBT-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+/*================================= Futura End =======================================*/
 /*================================= Proxima Nova Start =======================================*/
 @font-face {
   font-family: "Proxima Nova Rg";
@@ -151,7 +188,7 @@ h5, .h5,
 h6, .h6 {
   font-weight: 700;
   color: #000000;
-  font-family: "Futura PT", sans-serif;
+  font-family: "Futura", sans-serif;
 }
 
 h1, .h1 {
@@ -4326,7 +4363,7 @@ body .is-layout-constrained > .wp-block-group {
   max-width: 1200px;
 }
 .RouteWraper .checkWraper {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   padding-top: 5px;
 }
 .RouteWraper .leftColumn .doc_block.btn_sm {
@@ -4383,6 +4420,7 @@ body .is-layout-constrained > .wp-block-group {
   color: #000000;
   cursor: pointer;
   font-weight: 700;
+  margin-bottom: 14px;
 }
 
 .checkbox-custom + .checkbox-custom-label:before {
@@ -4391,18 +4429,19 @@ body .is-layout-constrained > .wp-block-group {
   border-radius: 0;
   display: inline-block;
   vertical-align: middle;
-  width: 14px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
   padding: 2px;
-  margin-right: 10px;
+  margin-right: 16px;
+  border-radius: 4px;
   text-align: center;
-  border: 2px solid #F1F1F2;
+  border: 1px solid #D1D0D2;
 }
 
 .checkbox-custom:checked + .checkbox-custom-label:before {
   content: "";
   display: inline-block;
-  background: #2E71A2;
+  background: #5F249F;
 }
 
 .route-info-wrap {
