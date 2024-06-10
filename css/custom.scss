@@ -210,7 +210,7 @@ h5, .h5,
 h6, .h6 {
     @include bold;
     color: $black;
-    font-family: $futura;
+    font-family: $futura-pt;
 }
 
 h1, .h1 {
@@ -556,6 +556,7 @@ input[type=checkbox]{
     }
     .navbar-collapse {
         flex-direction: column;
+        justify-content: space-between;
     }
     .container {
         align-items: flex-start;
@@ -569,6 +570,9 @@ input[type=checkbox]{
         ul {
             list-style: none;
             padding: 0;
+            .mega-indicator{
+                display: none !important;
+            }
         }
         .container-fluid,
         .container {
@@ -613,16 +617,22 @@ input[type=checkbox]{
             margin-bottom: 0;
             padding-right: 10px;
             padding-left: 20px;
+            li {
+                a{
+                    border-right: solid 1px $white;
+                }
+                &:last-child a{
+                    border-right: none;
+                }
+            }
             a {
-                color: $black;
-                font-size: 14px;
-                padding: 8px 10px;
-                display: inline-block;
+                color: $white;
+                font-size: 16px;
+                padding: 0px 10px;
+                font-weight: normal;
                 position: relative;
-                font-weight: 700;
             }
             a:hover {
-                color: $black;
                 text-decoration: underline;
             }
             li:last-child a::after {
@@ -713,23 +723,26 @@ input[type=checkbox]{
         }
     }
     .nav_bottom {
-        margin-top: 10px;
+        margin-top: 30px;
         margin-right: auto;
         margin-left: auto;
+    }
+    .mega-menu-wrap{
+        background: transparent !important;
     }
     .navbar-nav {
         >li {
             position: relative;
-            margin: 0px 4px;
+            margin: 0px 25px;
             >a {
-                font-size: 18px;
-                padding: 8px 15px 20px 15px !important;
+                @include futura-pt;
+                font-size: 20px;
+                padding: 0px 0px 20px 0px !important;
                 text-align: center;
                 @include all;
                 line-height: 24px;
                 position: relative;
-                color: $primary !important;
-                font-weight: 500;
+                color: $white !important;
             }
             @include xl {
                 &:hover {
@@ -868,6 +881,16 @@ input[type=checkbox]{
         }
     }
 }
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link{
+    font-size: 20px;
+    @include bold;
+    padding: 0 0 20px;
+    height: auto;
+    line-height: normal;
+}
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item{
+    padding: 0 25px;
+}
 /*================================= Main Header End =======================================*/
 
 .logged-in .fixed_btns {
@@ -929,7 +952,7 @@ input[type=checkbox]{
 //language selector
 .select_language {
     display: flex;
-    margin: 0px 2px;
+    margin: 0 0 0 24px;
     position: relative;
     padding-left: 0px;
     padding-right: 10px;
@@ -937,22 +960,24 @@ input[type=checkbox]{
         cursor: pointer;
         background: none;
         border: 0;
+        min-height: 25px;
+        min-width: 25px;
         -webkit-appearance: none;
         -moz-appearance: none;
         background-image: url(../img/globe.svg) !important;
         background-repeat: no-repeat;
-        font-size: 14px;
+        font-size: 1px;
         color: #010101 !important;
-        padding-left: 30px;
-        padding-right: 20px;
-        font-weight: 400;
-        background-position: right;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-weight: 100;
+        background-position: center;
         option {
             font-size: 16px;
         }
         &:hover {
-            color: $primary !important;
-            filter: brightness(0) saturate(100%) invert(19%) sepia(36%) saturate(5022%) hue-rotate(194deg) brightness(94%) contrast(101%);
+            //color: $primary !important;
+            //filter: brightness(0) saturate(100%) invert(19%) sepia(36%) saturate(5022%) hue-rotate(194deg) brightness(94%) contrast(101%);
         }
     }
     select::-ms-expand {
@@ -2744,26 +2769,29 @@ h2+.expand_img_grid {
             max-width: 500px;
             text-align: center;
             form {
-                max-width: 350px;
-                margin-top: 40px;
-                margin-bottom: 50px;
+                max-width: 280px;
+                margin: 40px auto;
             }
             input {
-                height: 50px;
+                height: 40px;
                 font-size: 16px;
                 @include regular;
+                min-height: 40px;
                 padding-left: 20px;
-                padding-right: 20px;
-                border: 1px solid #E2E2E2;
-                box-shadow: 0px 0px 3px #00000029;
+                padding-right: 40px;
+                border-radius: 5px;
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
             }
             .btn {
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
                 color: $black;
                 border-radius: 0;
+                position: absolute;
+                padding: 0;
+                right: 0;
                 //background-color: $cyber-yellow;
-                box-shadow: 0px 0px 3px #00000029;
+                //box-shadow: 0px 0px 3px #00000029;
             }
         }
         .btn_normal {
@@ -2826,6 +2854,7 @@ h2+.expand_img_grid {
     .no-found-wraper .no-found-info .search_box form{
         max-width: 260px;
         margin-bottom: 0;
+        position: relative;
     }
 }
 @media (max-width: 500px) {
@@ -2861,6 +2890,7 @@ h2+.expand_img_grid {
     .search_box {
         margin-bottom: 0px;
         max-width: 280px;
+        position: relative;
         .btn {
             border: 0;
             background: none;
@@ -2933,12 +2963,14 @@ h2+.expand_img_grid {
             font-weight: normal !important;
         }
         .promagnifier {
-            background: $primary !important;
+            background: transparent !important;
             border-radius: 0px 5px 5px 0px !important;
             width: 45px !important;
             display: flex;
             align-items: center;
             justify-content: center;
+            position: absolute;
+            right: 0;
         }
         .innericon svg {
             width: 28px !important;
